@@ -29,7 +29,11 @@ console.log("Undefined ->", notAssigned);
 // 6. Symbol (unique values)
 let sym1 = Symbol("id");
 let sym2 = Symbol("id");
+
+let var1 = "id";
+let var2 = "id";
 console.log("Symbol -> sym1 === sym2 ?", sym1 === sym2);
+console.log("Variable -> var1 === var2 ?", var1 === var2);
 
 // 7. BigInt (large integers beyond Number limit)
 let bigNum = 1234567890123456789012345678901234567890n;
@@ -52,7 +56,7 @@ function add(x, y) {
 console.log("Function -> add(5, 3):", add(5, 3));
 
 // 11. Date
-let today = new Date();
+let today = new Date(); //GMT
 console.log("Date ->", today);
 
 // 12. RegExp
