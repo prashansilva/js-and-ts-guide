@@ -14,15 +14,40 @@ console.log("\nmap (double each number):");
 const doubled = numbers.map(num => num * 2);
 console.log(doubled);
 
+const names = ["John", "Jane", "Joe", "Jill"];
+const upperCaseNames = names.map(name => name.toUpperCase());
+console.log(upperCaseNames);
+
+const persons = [ { name: "John", age: 30 }, { name: "Jane", age: 25 } ];
+const upperCaseNames2 = persons.map(person => person.name.toUpperCase());
+console.log(upperCaseNames2);
+
 // Example 3: filter
 console.log("\nfilter (keep even numbers):");
 const evens = numbers.filter(num => num % 2 === 0);
 console.log(evens);
 
+const students = [ { name: "John", age: 30 }, { name: "Jane", age: 25 } ];
+const youngStudents = students.filter(student => student.age < 30);
+console.log(youngStudents);
+
 // Example 4: reduce
 console.log("\nreduce (sum all numbers):");
-const sum = numbers.reduce((acc, cur) => acc + cur, 0);
+const sum = numbers.reduce((acc, cur) => acc + cur, 0 );
 console.log(sum);
+
+const students = [ { name: "John", age: 30 }, { name: "Jane", age: 25 } ];
+const sumOfAges = students.reduce((acc, cur) => acc + cur.age, 0);
+console.log(sumOfAges);
+
+// get sum ages which is age > 26
+const sumOfAges2 = students.reduce((acc, cur) => {
+    if (cur.age > 26) {
+        acc += cur.age;
+    }
+    return acc;
+}, 0);
+console.log(sumOfAges2);
 
 // Example 5: some
 console.log("\nsome (any number greater than 4?):");
